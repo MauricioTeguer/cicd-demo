@@ -3,15 +3,15 @@ name: Primer workflow
 on: push
 
 jobs:
- validar:
-  runs-on: ubuntu-latest
+  validar:
+    runs-on: ubuntu-latest
 
-  steps:
-   - name: Mostrar mensaje
-     run: echo "HOLA ACTIONS"
-     
-   - name: Bajar codigo
-     uses: actions/checkout
+    steps:
+      - name: Mostrar mensaje
+        run: echo "HOLA ACTIONS"
 
-   - name: Probar codigo
-   - run: python3 main.py
+      - name: Bajar codigo
+        uses: actions/checkout@v4
+
+      - name: Probar codigo
+        run: python3 main.py
